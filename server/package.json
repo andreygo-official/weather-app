@@ -1,13 +1,15 @@
 {
-  "name": "weather-api",
+  "name": "weather-news-api",
   "version": "1.0.0",
   "dependencies": {
     "express": "^4.18.2",
     "dotenv": "^16.0.3",
     "axios": "^1.4.0",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "uuid": "^9.0.0"
   },
   "scripts": {
-    "start": "node server/api/weather.js"
+    "start": "node server/api/weather.js",
+    "vercel-build": "echo 'Skipping frontend build'"
   }
 }
