@@ -1,16 +1,12 @@
 const express = require('express');
-const dotenv = require('dotenv');
 const axios = require('axios');
-const cors = require('cors');
+const dotenv = require('dotenv');
 
 dotenv.config({ path: __dirname + '/../../.env' });
 
-const app = express();
-app.use(cors());
+const router = express.Router();
 
 const API_KEY = process.env.OPENWEATHER_API_KEY;
-
-const router = express.Router();
 
 router.get('/weather', async (req, res) => {
     let city = req.query.city;

@@ -1,13 +1,11 @@
 const express = require('express');
-const dotenv = require('dotenv');
 const axios = require('axios');
-const cors = require('cors');
+const dotenv = require('dotenv');
 const { v4: uuidv4 } = require('uuid');
 
 dotenv.config({ path: __dirname + '/../../.env' });
 
 const router = express.Router();
-router.use(cors());
 
 const API_KEY = process.env.NEWS_API_KEY;
 let articlesWithId = [];
