@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "server/index.js", "use": "@vercel/node" }
-  ],
+  "functions": {
+    "server/index.js": {
+      "runtime": "@vercel/node"
+    }
+  },
   "routes": [
     { "src": "/api/weather", "dest": "/server/index.js" },
     { "src": "/api/weather/forecast", "dest": "/server/index.js" },
