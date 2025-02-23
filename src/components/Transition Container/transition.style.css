@@ -1,0 +1,23 @@
+.nav{
+    text-decoration: none;
+    opacity: 0.5;
+    color: rgb(255, 255, 255);
+}
+.nav:hover{
+    text-decoration: underline;
+}
+.current-section{
+    color: white;
+}
+.sections{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(71, 65, 109);
+    margin-top: 20px;
+    border-radius: 30px;
+    padding-left: 15px;
+    display: flex;
+}
+.arrow:hover{
+    text-decoration: none;
+}
