@@ -1,14 +1,18 @@
 const express = require('express');
-const axios = require('axios');
 const dotenv = require('dotenv');
+const axios = require('axios');
+const cors = require('cors');
 
 dotenv.config({ path: __dirname + '/../../.env' });
+console.log("API Key:", process.env.OPENWEATHER_API_KEY);
 
-const router = express.Router();
+const app = express();
+app.use(cors());
 
+const PORT_FOR_WEATHER = process.env.PORT_FOR_WEATHER || 3001;
 const API_KEY = process.env.OPENWEATHER_API_KEY;
 
-router.get('/weather', async (req, res) => {
+app.get('/weather', async (req, res) => {
     let city = req.query.city;
     try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`);
@@ -17,8 +21,7 @@ router.get('/weather', async (req, res) => {
         res.status(error.response?.status || 500).json({ error: error.response?.data?.message || "Internal Server Error" });
     }
 });
-
-router.get('/weather/forecast', async (req, res) => {
+app.get('/weather/forecast', async (req, res) => {
     let city = req.query.city;
     try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`);
@@ -28,4 +31,7 @@ router.get('/weather/forecast', async (req, res) => {
     }
 });
 
-module.exports = router;
+
+app.listen(PORT_FOR_WEATHER, () => {
+    console.log('Server started on ' + PORT_FOR_WEATHER + ' port')
+})
