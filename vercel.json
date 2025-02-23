@@ -1,13 +1,16 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server/api/weather.js", "use": "@vercel/node" },
-    { "src": "server/api/news.js", "use": "@vercel/node" }
+    {
+      "src": "server/api/*.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
     { "src": "/api/weather", "dest": "/server/api/weather.js" },
     { "src": "/api/weather/forecast", "dest": "/server/api/weather.js" },
     { "src": "/api/news", "dest": "/server/api/news.js" },
     { "src": "/api/news/:id", "dest": "/server/api/news.js" }
-  ]
+  ],
+  "outputDirectory": ""
 }
