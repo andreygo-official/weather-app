@@ -32,6 +32,4 @@ app.get('/weather/forecast', async (req, res) => {
 });
 
 
-app.listen(PORT_FOR_WEATHER, () => {
-    console.log('Server started on ' + PORT_FOR_WEATHER + ' port')
-})
+module.exports = app

@@ -43,5 +43,4 @@ app.get('/news/:id', async (req, res) => {
 })
 
 
-app.listen(PORT_FOR_NEWS, () => {
-    console.log('Server started on ' + PORT_FOR_NEWS + ' port')})
+module.exports = app

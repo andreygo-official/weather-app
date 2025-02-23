@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "functions": {
+      "api/weather.js": { "runtime": "nodejs18.x" },
+      "api/news.js": { "runtime": "nodejs18.x" }
+    },
+    "routes": [
+      { "src": "/weather", "dest": "/api/weather.js" },
+      { "src": "/news", "dest": "/api/news.js" }
+    ]
+  }
+  
