@@ -6,9 +6,9 @@
     }
   },
   "routes": [
-    { "src": "/api/weather", "dest": "/server/index.js" },
-    { "src": "/api/weather/forecast", "dest": "/server/index.js" },
-    { "src": "/api/news", "dest": "/server/index.js" },
-    { "src": "/api/news/:id", "dest": "/server/index.js" }
+    { "src": "/api/weather", "dest": "server/index.js" },
+    { "src": "/api/weather/forecast", "dest": "server/index.js" },
+    { "src": "/api/news", "dest": "server/index.js" },
+    { "src": "/api/news/:id", "dest": "server/index.js" }
   ]
 }
