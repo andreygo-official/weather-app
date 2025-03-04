@@ -7,7 +7,7 @@ const TodayWeather = ({ days, currentDayIndex, date, city }) => {
     const [err, setError] = useState(null)
     useEffect(() => {
         if (city)
-            fetch(`http://localhost:3001/weather?city=${city}`)
+        fetch(`https://weather-app-6iyt.onrender.com/weather?city=${city}`)
                 .then(res => res.json())
                 .then(data => {
                     if (data.cod === 200) {

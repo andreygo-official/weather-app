@@ -7,7 +7,11 @@ dotenv.config({ path: __dirname + '/../../.env' });
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: ['GET'],
+    allowedHeaders: ['Content-Type']
+}));
 
 const PORT_FOR_WEATHER = process.env.PORT_FOR_WEATHER || 3001;
 const API_KEY = process.env.OPENWEATHER_API_KEY;

@@ -11,7 +11,7 @@ const FiveDayForecast = ({ days, currentDayIndex, city }) => {
     const [err, setError] = useState(null)
     useEffect(() => {
         if (city)
-            fetch(`http://localhost:3001/weather/forecast?city=${city}`)
+        fetch(`https://weather-app-6iyt.onrender.com/weather/forecast?city=${city}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.cod === '200') {

@@ -6,7 +6,11 @@ const { v4: uuidv4 } = require('uuid')
 
 dotenv.config({ path: __dirname + '/../../.env' });
 const app = express()
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET'],
+  allowedHeaders: ['Content-Type']
+}));
 const PORT_FOR_NEWS = process.env.PORT_FOR_NEWS || 3002
 const API_KEY = process.env.NEWS_API_KEY
 let artcilesWithId = []
