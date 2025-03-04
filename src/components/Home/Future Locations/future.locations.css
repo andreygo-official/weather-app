@@ -1,0 +1,38 @@
+.future-locations-container{
+    background-color: rgb(78, 75, 94);
+    margin-bottom: -20px;
+}
+h1{
+    color: white;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+.location-cont{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 30px;
+    flex: 1;
+    height: 100%;
+    transition: 0.5s all;
+    min-height: 300px;
+}
+.date{
+    color: rgb(0, 183, 255);
+    font-size: 25px;
+}
+.locations-text{
+    margin-left: 20px;
+    color: white;
+    flex-grow: 1;
+}
+
+.location-cont:hover{
+    scale: 1.1;
+}
+@media (max-width: 576px){
+    .location-cont:hover{
+        scale: 1;
+    }
+}

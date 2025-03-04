@@ -1,0 +1,161 @@
+.table-container{
+    display: flex;
+    justify-content: center;
+}
+.weather-container{
+    background-color: rgb(37, 34, 57);
+}
+.search-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+}
+.cont{
+    background-image: url(https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?cs=srgb&dl=pexels-lex-photography-450597.jpg&fm=jpg);
+    min-height: 350px;
+    background-size: cover;
+    padding: 70px 0px;
+    background-position: 30%;
+
+}
+.form-control {
+    border-radius: 30px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-grow: 0.5;
+    position: relative;
+}
+
+.btn-find {
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 1px;
+    border: 1px solid white;
+}
+.btn-find:disabled{
+    opacity: 0.75;
+    pointer-events: auto;
+    cursor:auto;
+}
+.forecast-table{
+    margin-top: -140px;
+}
+.today{
+    width: 40%;
+}
+.forecast-five-days{
+    width: 12%;
+}
+.forecast {
+    display: table-cell;
+    vertical-align: top;
+    color: rgb(201, 201, 201);
+}
+
+.forecast-container {
+    display: table;
+}
+
+.forecast-day {
+    padding: 10px;
+    text-align: center;
+}
+
+.today-forecast-info {
+    background-color: rgb(56, 54, 76);
+    color: rgb(201, 201, 201);
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.city {
+    font-size: 25px;
+}
+
+.current-day-info {
+    background-color: rgb(78, 76, 104);
+    padding: 40px;
+    padding-bottom: 20px;
+}
+
+.current-temp {
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.temp-icon {
+    width: 120px;
+}
+
+.wind-info {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+.forecast-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 243.5px;
+}
+
+
+.forecast-img {
+    width: 50px;
+}
+
+.weather-icon {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 991px){
+    .forecast-five-days{
+        float: left;
+        width: 20%;
+    }
+    .today{
+        display: block;
+        width: 100%;
+    }
+    .table-container{
+        display: block;
+        margin-bottom: 350px;
+    }
+}
+
+.cameras-heading{
+    color: white;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.searchField::placeholder{
+    color: white;
+}
+.searchField{
+    background-color: rgb(37, 34, 57);
+    color: white;
+}
+.searchField:focus{
+    background-color: rgb(37, 34, 57);
+    outline: none;
+    box-shadow: none;
+    color: white;
+}

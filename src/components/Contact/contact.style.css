@@ -1,0 +1,54 @@
+.googleMap{
+    border-radius: 20px;
+    width: 100%;
+    min-height: 300px;
+}
+.bi-geo-alt-fill, .bi-telephone-fill, .bi-envelope-at-fill{
+    color: aqua;
+    font-size: 20px;
+}
+.location-info, .contact-info{
+    display: flex;
+    padding: 20px;
+    color: rgb(207, 207, 207);
+}
+.map-container{
+    background-color: rgb(71, 65, 109);
+    padding: 0px;
+    border-radius: 20px;
+}
+.location-info p{
+    color: rgb(207, 207, 207);
+    margin-left: 10px;
+    font-size: 20px;
+}
+.my-email{
+    text-decoration: none;
+    color: rgb(207, 207, 207);
+}
+.contact-info p{
+    font-size: 20px;
+}
+.form-container{
+    padding-left: 60px;
+}
+input{
+    height: 50px;
+}
+.btn-submit{
+    width: 100px;
+}
+.button-submit{
+    text-align: right;
+}
+.error{
+    color: red;
+    font-size: 15px;
+    text-align: left;
+}
+
+@media (max-width: 991px){
+    .form-container{
+        padding-left: 0px;
+    }
+}

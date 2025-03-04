@@ -1,0 +1,12 @@
+.article-title{
+    color: white;
+}
+.news-details-img{
+    width: 100%;
+    height: 600px;
+}
+.content{
+    color: rgb(204, 204, 204);
+    margin-top: 10px;
+    font-size: 20px;
+}

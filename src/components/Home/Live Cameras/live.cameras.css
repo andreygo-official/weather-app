@@ -1,0 +1,30 @@
+.live-card{
+    --bs-card-border-color: none;
+    border-radius: 20px;
+}
+.live-card img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.img-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.live-body{
+    height: 270px;
+}
+.bi-play-btn-fill{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    background-color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100%;
+}
+.cameras-row{
+    padding-bottom: 50px;
+}
