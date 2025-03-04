@@ -8,7 +8,8 @@ const NewsContainer = () => {
     const navigate = useNavigate()
     const [news, setNews] = useState(null)
     const [error, setError] = useState(null)
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         fetch('https://news-app-o64y.onrender.com/news')
@@ -18,10 +19,27 @@ const NewsContainer = () => {
                     setNews(data)
                     setError(null)
                 }
+                else {
+                    setError('Failed to fetch news.');
+                }
+                setLoading(false);
             })
+            .catch((err) => {
+                setError('Failed to fetch news.');
+                setLoading(false);
+            });
     }, [])
     const redirectionHandler = (id) => {
         navigate(`/news/${id}`)
+    }
+    if (loading) {
+        return (
+            <div className="loading-container">
+                <div className="spinner-border text-primary" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        );
     }
     if (error) {
         return <div>Error: {error}</div>;
@@ -127,9 +145,6 @@ const NewsContainer = () => {
                 </div>
             </div>
         )
-    }
-    if (error) {
-        <div>Loading...</div>
     }
 
 }
