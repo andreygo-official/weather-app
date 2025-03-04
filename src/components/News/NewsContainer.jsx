@@ -11,7 +11,7 @@ const NewsContainer = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
-        fetch('http://localhost:3002/news')
+        fetch('https://news-app-o64y.onrender.com/news')
             .then(res => res.json())
             .then(data => {
                 if (data.status === 'ok') {
