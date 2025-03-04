@@ -13,11 +13,13 @@ const Weather = () => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     const currentDayIndex = new Date().getDay()
     const [city, setCity] = useState(null);
+    const [loading, setLoading] = useState(true)
     const position = useGeolocation()
     const geolocationCity = useCityName(position?.coords?.latitude, position?.coords?.longitude);
     useEffect(() => {
         if (geolocationCity) {
             setCity(geolocationCity);
+            setLoading(false);
         }
     }, [geolocationCity]);
   
@@ -28,10 +30,19 @@ const Weather = () => {
     }
     const onClickHandler = () => {
         setCity(inputValue)
+        setLoading(true);
     }
 
     
-
+    if (loading) {
+        return (
+            <div className="loading-container">
+                <div className="spinner-border text-primary" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        );
+    }
     if (city) {
         return (
             <div className='weather-container'>
