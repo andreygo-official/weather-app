@@ -8,7 +8,7 @@ const NewsDetails = () => {
     const [article, setArticle] = useState(null)
     const [error, setError] = useState(null)
     useEffect(() => {
-        fetch(`http://localhost:3002/news/${id}`)
+        fetch(`https://news-app-o64y.onrender.com/news/${id}`)
             .then(res => res.json())
             .then(data => {
                 setArticle(data)
