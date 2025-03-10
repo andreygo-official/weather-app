@@ -34,7 +34,7 @@ const Weather = () => {
     }
 
     
-    if (loading) {
+    if (loading && !city) {
         return (
             <div className="loading-container">
                 <div className="spinner-border text-primary" role="status">
@@ -76,10 +76,6 @@ const Weather = () => {
 
             </div>
         )
-    }
-
-    else {
-        return <div className="loading">Loading...</div>;
     }
 }
 
